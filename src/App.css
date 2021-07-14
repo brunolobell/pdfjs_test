@@ -1,0 +1,11 @@
+.react-pdf__Page__textContent {
+  z-index: 2;
+}
+
+.highlights {
+  position: absolute; 
+  display: block; 
+  width: 85vw;
+  height: 85vh;
+  z-index: 1;
+}

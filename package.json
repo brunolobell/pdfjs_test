@@ -11,7 +11,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-pdf": "^5.3.0",
+    "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -21,9 +23,14 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+    "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/*index.js",
+      "!src/serviceWorker.js",
+      "!src/polyfill.js"
     ]
   },
   "browserslist": {
