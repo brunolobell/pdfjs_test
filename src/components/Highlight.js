@@ -1,17 +1,12 @@
 import { v1 } from 'uuid';
 
-export const Highlight = ({ pageNumber, color = 'yellow' }) => {
-  // Get a selection
-  const textSelected = window.getSelection();
-  const getRange = textSelected.getRangeAt(0);
-  //Get the text position on screen 
-  const getRect = getRange.getBoundingClientRect().toJSON();
-  console.log(getRect);
-  
+export const Highlight = (pageNumber, getRect, color = 'yellow') => {
+  // Create a newHighlight
   const newHighlight = {
     id: v1(),
     content: {
-      text: textSelected.toString()
+      // Get the text selected
+      text: window.getSelection().toString()
     },
     position: {
       x1: getRect.x,
@@ -22,8 +17,6 @@ export const Highlight = ({ pageNumber, color = 'yellow' }) => {
     color: color,
     pageNumber: pageNumber
   }
-
-  console.log(newHighlight);
 
   return newHighlight
 }

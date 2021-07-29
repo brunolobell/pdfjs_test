@@ -5,7 +5,8 @@
 .highlights {
   position: absolute; 
   display: block; 
-  width: 85vw;
-  height: 85vh;
   z-index: 1;
+  margin: auto;
+  left: 0;
+  right: 0;
 }

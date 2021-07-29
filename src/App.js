@@ -9,7 +9,7 @@ class App extends Component {
     loading: true
   };
 
-  componentDidMount(){
+  /*componentDidMount(){
     axios.get('http://tot.cloud.c3.furg.br/api/files/v1/searchable/7b947862-e3c1-40b3-a3c0-648cbc7a6210', {
       headers: {'X-ToT-Auth': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjYzMTY5OTIsInVzZXJuYW1lIjoidG90YWRtaW4ifQ.0RF64fw842bRhUZtoq1OdZfKQT3wVaS1UEnSr2ERi0w'},
       responseType: 'blob'
@@ -22,12 +22,12 @@ class App extends Component {
       })
     })
     .catch(err => console.log(err))
-  }
+  }*/
 
   render(){
     return(
       //<PDFViewer width="100%" height="800px">
-        <MyDocument doc={this.state.fileURL} loading={this.state.loading}/>
+        <MyDocument doc={"https://arxiv.org/pdf/2101.10281v1.pdf"} loading={false}/>
       
       //</PDFViewer>
     );
